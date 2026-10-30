@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-kv-cache-service"
+version = "0.1.0"
+description = "Deterministic LLM-serving simulator with safe KV-cache reuse and recovery"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "torch>=2.3,<3",
+]
+
+[project.scripts]
+kv-cache-service = "kv_service.cli:main"
+
+[tool.setuptools]
+packages = ["kv_service"]
+

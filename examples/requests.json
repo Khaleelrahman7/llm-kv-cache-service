@@ -1,0 +1,29 @@
+{
+  "cache_capacity": 16,
+  "cache_token_budget": 256,
+  "prefix_stride": 4,
+  "batch_size": 1,
+  "requests": [
+    {
+      "request_id": "alpha",
+      "namespace": "demo",
+      "prompt": "shared prompt",
+      "max_new_tokens": 5
+    },
+    {
+      "request_id": "beta",
+      "namespace": "demo",
+      "prompt": "shared prompt extended",
+      "max_new_tokens": 8
+    },
+    {
+      "request_id": "alpha",
+      "namespace": "demo",
+      "prompt": "shared prompt",
+      "max_new_tokens": 10,
+      "resume": true,
+      "stop": ["cccc"]
+    }
+  ]
+}
+
